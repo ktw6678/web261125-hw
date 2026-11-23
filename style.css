@@ -1,1 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  background-color: #0f1b2b;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.site-header {
+  padding: 20px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+
+.hero {
+  background: linear-gradient(135deg, #2b1d12 0%, #15100c 60%, #090a0f 100%);
+  border-radius: 8px;
+  padding: 80px 40px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+#q {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #475569;
+  background-color: #ffffff;
+  color: #0f172a;
+  font-size: 0.9rem;
+  width: 190px;
+}
+
+#sort {
+  padding: 5px 8px;
+  border-radius: 4px;
+  border: 1px solid #475569;
+  background-color: #ffffff;
+  color: #0f172a;
+  font-size: 0.9rem;
+}
+
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .board {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.poster-wrap {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  background-color: #1e293b;
+}
+
+.poster-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.badge.high {
+  background-color: #e11d48;
+  color: #ffffff;
+}
+
+.badge.mid {
+  background-color: #facc15;
+  color: #111827;
+}
+
+.card-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.card-body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+.card-body .year {
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+
+.like {
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  color: #bbb;
+  cursor: pointer;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.like.liked {
+  color: crimson;
+}
+
+
+.state-empty {
+  display: none;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+  font-size: 1.05rem;
+}
+
+.board.is-empty + .state-empty {
+  display: block;
+}
+
+.site-footer {
+  border-top: 1px solid #1e293b;
+  padding: 24px 0 40px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
