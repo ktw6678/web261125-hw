@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내 영화 보드</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">내 영화 보드</h1>
+      <nav class="nav">
+        <a href="#board">보드</a>
+        <a href="#about">소개</a>
+        <a href="#footer">상세</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="hero" id="about">
+      <div class="hero-content">
+        <h2>다시 보고 싶은 영화 6편</h2>
+        <p>포스터를 누르면 생각나는 장면이 있는 영화들입니다.</p>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <input id="q" type="search" placeholder="영화 제목 검색">
+      <p id="count">6편</p>
+      <p>찜 <span id="likeCount">0</span>편</p>
+      <label for="sort">정렬</label>
+      <select id="sort">
+        <option value="rating">평점순</option>
+        <option value="year">개봉연도순</option>
+        <option value="title">제목순</option>
+      </select>
+    </div>
+
+    <section class="board" id="board"></section>
+    <p class="state-empty">조건에 맞는 영화가 없습니다.</p>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <p>데이터 및 포스터 출처: TMDB (The Movie Database)</p>
+      <p>2026학년도 2학기 웹개발기초 12주차 수업 실습 | 컴퓨터융합학부 2651020 김태완</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
