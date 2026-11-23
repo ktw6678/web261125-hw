@@ -33,6 +33,6 @@ const movies = [
     title: "범죄도시",
     year: 2017,
     rating: 6.5,
-    poster: "https://image.tmdb.org/t/p/w500/2l536mE7W62p5G5b8rM7l1oD5M0.jpg"
+    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN8J-kC_kNgiTYEPRC1yyAVqZD6uvoiano3qmZLhaMMg&s=10"
   }
 ];
